@@ -22,4 +22,12 @@ tasks {
     compileTestKotlin {
         kotlinOptions.jvmTarget = "1.8"
     }
+    val sourcesJar by creating(Jar::class) {
+        dependsOn(JavaPlugin.CLASSES_TASK_NAME)
+        classifier = "sources"
+        from(sourceSets["main"].allSource)
+    }
+    artifacts {
+        add("archives", sourcesJar)
+    }
 }
