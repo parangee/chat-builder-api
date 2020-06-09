@@ -1,0 +1,3 @@
+name: ChatBuilderAPI
+version: 0.0.1.R0.1
+main: org.bitbucket.parangee.chatbuilder.plugin.ChatBuilderPlugin
